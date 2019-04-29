@@ -59,6 +59,7 @@ $(document).ready(function(){
     audios[color].load()
     audios[color].play()
     playerList.push(color)
+    $("#infobox").html(playerList.length.toString()+" / "+btnList.length.toString());
     if (btnList.length == playerList.length){
       setTimeout(function(){
         if (arraysEqual(btnList, playerList)){
@@ -94,7 +95,7 @@ $(document).ready(function(){
             $("#infobox").html("Wrong Sequence!")
           }
         }
-      }, 750)
+      }, 1500)
     }
   }
   
