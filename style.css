@@ -1,0 +1,111 @@
+body {
+  background: grey;
+  font-family: "arial"
+}
+#mainbody {
+  background: #262626;
+  height: 400px;
+  width: 400px;
+  border: 5px solid #262626;
+  border-radius: 200px;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  text-align: center;
+  box-shadow: 6px 10px 35px 5px rgba(0,0,0,0.5)
+}
+button {
+  outline: none;
+  cursor: pointer;
+  height: 170px;
+  width: 170px;
+  border: 3px solid #262626;
+}
+button:active {
+  opacity: 0.5;
+}
+.active {
+  opacity: 0.5;
+}
+#red {
+  background: red;
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: -100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  box-shadow: inset 10px 10px 12px 0.1px #cc0000;
+}
+
+#blue {
+  background: blue;
+  border-top-right-radius: 200px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: inset -10px 10px 12px 0.1px #000099;
+}
+#green {
+  background: green;
+  border-bottom-right-radius: 200px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: inset -10px -10px 12px 0.1px #003300;
+}
+#yellow {
+  background: yellow;
+  border-bottom-left-radius: 200px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  box-shadow: inset 10px -10px 12px 0.1px #999900;
+}
+#middle {
+  width: 200px;
+  height: 200px;
+  background: #f1f1f1;
+  position: absolute;
+  top: 85px;
+  left: 85px;
+  border-radius: 50%;
+  border: 15px solid #262626;
+  text-align: center;
+}
+#start {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  border-radius: 40px;
+  background: #99ff66;
+}
+#strict{
+  border-radius: 5px;
+  height: 40px;
+  width: 65px;
+  position: relative;
+  top: 10px;
+
+}
+#level {
+  position: relative;
+  top: 100px;
+  
+}
+
+#infobox{
+  text-align: center;
+  vertical-align: center;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  height: 45px;
+  padding-top: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background: #9999ff;
+  font-size: 1.5em;
+}
