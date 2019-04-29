@@ -13,12 +13,12 @@ $(document).ready(function(){
     "yellow": yellowAudio
   }
   
-  // var btnList = ["red", "blue", "green", "yellow"]
-  var btnList = []
+  var btnList = [] // list that stores the button sequence
   var turns = 1;
-  var playerList = [];
+  var playerList = []; // list that stores the sequence pressed by the player
   var colors = ["red", "blue", "green", "yellow"]
   
+  // in strict mode, a wrong sequence will start a new game
   var strict = false;
   if (strict) {
       $("#strict").css("background-color", "green")
@@ -27,20 +27,25 @@ $(document).ready(function(){
   }
   
   function addBtn(){
+    // add a random sound to the btnList sequence 
     var rndButton = colors[Math.floor(4*Math.random())]
     btnList.push(rndButton)
   }
   
   function arraysEqual(arr1, arr2) {
+    // check if two arrays are exactly equal
+    // arr1 == arr2 if all elements are equal
     if(arr1.length !== arr2.length)
       return false;
     for(var i = arr1.length; i--;) {
       if(arr1[i] !== arr2[i])
         return false;
-    }return true;
+    }
+    return true;
   }
   
   function playList(List){
+    // play the sound sequence
     if (List.length>0){   
       var audioElement = audios[List[0]];
       audioElement.load()
@@ -64,6 +69,7 @@ $(document).ready(function(){
       setTimeout(function(){
         if (arraysEqual(btnList, playerList)){
           if (turns === 20){
+            // win after 20 turns
             $("#infobox").html("You win! Start new Game.")
             btnList = []
             playerList = []
